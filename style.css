@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    background-color: #ccd455;
+    color: #006ece;
+
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: 0.1fr 0.8fr 0.1fr;
+    grid-template-columns: 0.3fr 0.7fr;
+    grid-template-areas:
+        "cabecalho cabecalho"
+        "aolado principal"
+        "rodape rodape";
+    gap: 4px;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0;
+}
+
+.cabecalho {
+    background-color: #8FBCB3;
+    color: #006ece;
+    grid-area: cabecalho;
+}
+
+.principal {
+    background-color: #96C3EB;
+    grid-area: principal;
+}
+
+.aolado {
+    background-color: #AA6DC4;
+    grid-area: aolado;
+}
+
+.rodape {
+    background-color: #8FBCB3;
+    color: #006ece;
+    grid-area: rodape;
+}
+
+@media (max-width: 1007px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.2fr 0.6fr 0.1fr;
+        grid-template-areas:
+            "cabecalho"
+            "aolado"
+            "principal"
+            "rodape";
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.8fr 0.1fr;
+        grid-template-areas:
+            "cabecalho"
+            "principal"
+            "rodape";
+    }
+
+    .aolado {
+        display: none;
+    }
+}
