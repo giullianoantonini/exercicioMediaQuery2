@@ -61,7 +61,7 @@ h1 {
 @media (max-width: 640px) {
     body {
         grid-template-columns: 1fr;
-        grid-template-rows: 0.1fr 0.8fr 0.1fr;
+        grid-template-rows: 0.1fr 1fr 0.1fr;
         grid-template-areas:
             "cabecalho"
             "principal"
